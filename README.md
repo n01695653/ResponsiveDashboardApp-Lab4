@@ -1,97 +1,117 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# Responsive Dashboard App - CPAN213 Lab 4
 
-# Getting Started
+## Student Information
+- **Name:** MaksudHusen A Malek
+- **Student ID:** N01695653
+- **Course:** CPAN 213 - Cross-Platform Mobile Application Development
+- **Lab:** Lab 4 - Creating Responsive Layouts with Flexbox
+- **Date:** 5\10\2025
 
-> **Note**: Make sure you have completed the [Set Up Your Environment](https://reactnative.dev/docs/set-up-your-environment) guide before proceeding.
+## Project Overview
+This React Native application demonstrates advanced responsive design techniques using Flexbox. The app features a fully responsive dashboard that adapts to different screen sizes, orientations, and platforms.
 
-## Step 1: Start Metro
+## Features Implemented
+-  **Responsive Grid System** - Adapts columns based on screen size
+-  **Dashboard Widgets** - Statistics cards with trend indicators
+-  **Platform-Specific Styling** - iOS and Android optimizations
+-  **Orientation Handling** - Automatic layout adjustments
+-  **Theme System** - Consistent colors, typography, and spacing
+-  **Performance Optimized** - 60fps smooth animations
 
-First, you will need to run **Metro**, the JavaScript build tool for React Native.
+## Technologies Used
+- React Native 0.72+
+- React Native Vector Icons
+- Flexbox Layout System
+- Dimensions API for responsive design
 
-To start the Metro dev server, run the following command from the root of your React Native project:
+## Installation & Setup
 
-```sh
-# Using npm
-npm start
+### Prerequisites
+- Node.js 16+
+- Android Studio with emulator
+- React Native CLI
 
-# OR using Yarn
-yarn start
-```
+### Quick Start
+```bash
+# Clone repository
+git clone [your-repository-url]
+cd ResponsiveDashboardApp
 
-## Step 2: Build and run your app
+# Install dependencies
+npm install
 
-With Metro running, open a new terminal window/pane from the root of your React Native project, and use one of the following commands to build and run your Android or iOS app:
+# Start Metro bundler
+npx react-native start
 
-### Android
+# In new terminal - Run on Android
+npx react-native run-android
 
-```sh
-# Using npm
-npm run android
+Responsive Design Features
+Breakpoint System
+Small Phones (< 350px): 1 column layout
 
-# OR using Yarn
-yarn android
-```
+Medium Phones (350-400px): 2 column layout
 
-### iOS
+Large Phones (400-500px): 2 column layout
 
-For iOS, remember to install CocoaPods dependencies (this only needs to be run on first clone or after updating native deps).
+Tablets (500-768px): 3 column layout
 
-The first time you create a new project, run the Ruby bundler to install CocoaPods itself:
+Large Tablets (> 768px): 4 column layout
 
-```sh
-bundle install
-```
+Responsive Utilities
+wp() - Width percentage calculator
 
-Then, and every time you update your native dependencies, run:
+hp() - Height percentage calculator
 
-```sh
-bundle exec pod install
-```
+rf() - Responsive font scaling
 
-For more information, please visit [CocoaPods Getting Started guide](https://guides.cocoapods.org/using/getting-started.html).
+getGridColumns() - Dynamic column calculation
 
-```sh
-# Using npm
-npm run ios
+Platform Adaptations
+iOS: Native shadow properties, specific typography
 
-# OR using Yarn
-yarn ios
-```
+Android: Elevation shadows, Material Design colors
 
-If everything is set up correctly, you should see your new app running in the Android Emulator, iOS Simulator, or your connected device.
+Both: Consistent spacing, adaptive padding
 
-This is one way to run your app — you can also build it directly from Android Studio or Xcode.
+Key Components
+DashboardHeader
+Responsive app bar with navigation
 
-## Step 3: Modify your app
+Platform-specific status bar handling
 
-Now that you have successfully run the app, let's make changes!
+Adaptive typography and spacing
 
-Open `App.tsx` in your text editor of choice and make some changes. When you save, your app will automatically update and reflect these changes — this is powered by [Fast Refresh](https://reactnative.dev/docs/fast-refresh).
+ResponsiveGrid
+Dynamic column calculation
 
-When you want to forcefully reload, for example to reset the state of your app, you can perform a full reload:
+Orientation change support
 
-- **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Dev Menu**, accessed via <kbd>Ctrl</kbd> + <kbd>M</kbd> (Windows/Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (macOS).
-- **iOS**: Press <kbd>R</kbd> in iOS Simulator.
+Performance-optimized rendering
 
-## Congratulations! :tada:
+Widget System
+BaseWidget for consistent structure
 
-You've successfully run and modified your React Native App. :partying_face:
+StatisticWidget for data display
 
-### Now what?
+Reusable and customizable
 
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [docs](https://reactnative.dev/docs/getting-started).
+Performance Optimizations
+StyleSheet.create() for all styles
 
-# Troubleshooting
+Memoized responsive calculations
 
-If you're having issues getting the above steps to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
+Optimized re-renders with React hooks
 
-# Learn More
+Efficient dimension change handling
 
-To learn more about React Native, take a look at the following resources:
+Testing
+The app has been tested on:
 
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+Android Phones (Multiple screen sizes)
+
+ Android Tablets
+
+ Different orientations
+
+
